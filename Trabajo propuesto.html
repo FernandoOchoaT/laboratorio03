@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Página Personal</title>
+  <link rel="stylesheet" href="css/trabajopropuesto.css">
+  <style>
+    .box {
+      background-color: #f0f0f0;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <section class="box">
+    <img src="img/_109757296_gettyimages-1128004359.jpg" width="250" alt="" class="box-img">
+    <h1>Sobre Mi</h1>
+    <h2>Soy Estudiante de Diseño y desarrollo de Software</h2>
+    <p>Me presento, mi nombre es Fernando, soy de Arequipa y tengo 20 años. Actualmente, he ido aprendiendo los lenguajes de programación, como el curso de HTML. De igual manera, disfruto aprender temas nuevos. Algo que me llama mucho la atención es la IA, por la misma razón de que buscan que las máquinas realicen las mismas capacidades de un ser humano. Soy amante de los gatos, en especial los de blanco; me gustaría tener uno algún día.</p>
+    <ul>
+      <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+    </ul>
+    <button onclick="Color()">colores</button>
+  </section>
+
+  <script>
+    var colores = ["#87CEEB", "#FFA07A", "#98FB98", "#FFD700"]; // Lista de colores
+    var indiceColor = 0; // Índice para rastrear el color actual
+
+    function Color() {
+      var boxElement = document.querySelector(".box");
+      boxElement.style.backgroundColor = colores[indiceColor]; // Cambia el color de fondo al siguiente color en la lista
+
+      // Incrementa el índice para apuntar al siguiente color
+      indiceColor = (indiceColor + 1) % colores.length;
+    }
+  </script>
+</body>
+</html>
